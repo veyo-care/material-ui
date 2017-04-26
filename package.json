@@ -2,7 +2,7 @@
   "name": "material-ui-build",
   "private": true,
   "author": "Material-UI Team",
-  "version": "0.17.4",
+  "version": "0.22.4",
   "description": "React Components that Implement Google's Material Design.",
   "main": "./src/index.js",
   "keywords": [
@@ -29,6 +29,8 @@
     "build:babel": "cross-env NODE_ENV=release babel ./src --out-dir ./build --ignore spec.js",
     "build:copy-files": "babel-node ./scripts/copy-files.js",
     "clean:build": "rimraf build",
+    "export": "cp -r ./build/* ../material-ui-built",
+    "build-amend": "yarn run build && git add . && git commit --amend --no-edit && git push -f origin HEAD:selectors && yarn run export",
     "lint": "eslint src docs/src test --quiet --cache && echo \"eslint: no lint errors\"",
     "lint:find-rules": "eslint-find-rules -u .eslintrc.js",
     "prebuild": "npm run clean:build",

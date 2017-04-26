@@ -328,7 +328,7 @@ class Calendar extends Component {
             selectedDate={this.state.selectedDate}
           />
         }
-        <div style={prepareStyles(styles.calendar)}>
+        <div name='datePicker' style={prepareStyles(styles.calendar)}>
           {this.state.displayMonthDay &&
             <div style={prepareStyles(styles.calendarContainer)}>
               <CalendarToolbar
