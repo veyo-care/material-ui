@@ -1,4 +1,4 @@
-#### Veyo-care/material-ui fork
+# Veyo-care/material-ui fork
 
 This fork allows us to change material-ui components as we see fit. This repo works in parallel with the ```material-ui-built```repo.
 
@@ -23,4 +23,9 @@ This fork allows us to change material-ui components as we see fit. This repo wo
 8. Run a ```yarn upgrade```. It would seem more logical to just run ```yarn upgrade material-ui```, but for some reason, if you do run this, yarn will behave as if you had typed ```yarn upgrade```anyway.  
 
 9. You may have to rebuild your app.
+
+## Troubleshooting
+
+### I did everything but nothing has changed in my app and no error has been declared.
+Make sure to update the version of the package in the ```package.json```file in ```material.ui```. Else, when running the ```yarn upgrade```command, yarn won't see that the module has been updated.
 
